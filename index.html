@@ -1,0 +1,68 @@
+<!-- Сайт розроблено студенткою Дубограй Анастасією, ФЕМП група 5-9з -->
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sunny Tours - Головна</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">Sunny Tours</div>
+  <div>
+    <nav>
+      <a href="index.html" data-i18n="home">Головна</a>
+      <a href="about.html" data-i18n="about">Про нас</a>
+      <a href="tours.html" data-i18n="tours">Тури</a>
+      <a href="contacts.html" data-i18n="contacts">Контакти</a>
+      <a href="reviews.html" data-i18n="reviews">Відгуки</a>
+    </nav>
+  </div>
+  <div>
+    <button id="langBtn" class="lang-switch" data-i18n="selectlang">ENG</button>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div style="flex:1">
+      <h1 data-i18n="welcome">Ласкаво просимо до Sunny Tours</h1>
+      <p data-i18n="hero">Знайдіть свій ідеальний тур — по Україні та за кордон.</p>
+      <div style="margin-top:12px">
+        <a href="tours.html" class="btn">Переглянути тури</a>
+      </div>
+    </div>
+    <img src="https://picsum.photos/id/1018/800/600" alt="hero photo">
+  </section>
+
+  <h2 style="margin-top:18px">Популярні тури</h2>
+  <div id="toursContainer" class="tours-grid"></div>
+
+  <div style="margin-top:18px;padding:12px;background:linear-gradient(180deg,#fff,#f0fff8);border-radius:10px">
+    <h3>Автор</h3>
+    <p>Дубограй Анастасія — ФЕМП група 5-9з</p>
+  </div>
+</main>
+
+<div id="modal" class="modal">
+  <div class="box">
+    <button id="closeModal" style="float:right" class="small">✕</button>
+    <h3 id="tourName">Тур</h3>
+    <div class="small">Вартість: <span id="tourPrice"></span></div>
+    <div style="margin-top:8px">
+      <div class="form-row"><label class="small">Дата:</label><input id="date" type="date"></div>
+      <div class="form-row"><label class="small">Кількість осіб:</label><input id="persons" type="number" min="1" value="1"></div>
+      <div class="form-row"><strong>Загальна вартість: <span id="totalPrice"></span></strong></div>
+      <div style="text-align:right"><button id="confirmBooking" class="btn">Підтвердити</button></div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div>Сайт розроблено: Дубограй Анастасія, ФЕМП група 5-9з</div>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
